@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ekspeace.barbershop">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:name=".Constants.App">
+        <activity android:name=".View.SpecialService"/>
+        <activity android:name=".View.WelcomeScreen" />
+        <activity android:name=".View.UserAppointmentHistory" />
+        <activity android:name=".View.UserInfo"  android:noHistory="true"/>
+        <activity android:name=".View.InsertHairCutPicture" />
+        <activity android:name=".View.HairCuts" />
+        <activity android:name=".View.Appointment" />
+        <activity android:name=".View.Barbers" />
+        <activity android:name=".View.MainActivity" />
+        <activity android:name=".View.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--Meta data for your file for server url-->
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="@string/back4app_server_url" />
+
+        <!--Meta data for your file for application id-->
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="@string/back4app_app_id" />
+
+        <!--Meta data for your file for client key-->
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="@string/back4app_client_key" />
+    </application>
+
+</manifest>
